@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨寒的Blog</title>
+    <link rel="shortcut icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/css初始化代码.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <style>
+        /* 以下是弹性盒子 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            /* background-color: rgb(243, 230, 241); */
+            background-image: linear-gradient(to left bottom, #6658f2, #8c6af2, #a97ef2, #c093f2, #d4aaf4, #c8b9fc, #c0c7ff, #bfd3ff, #9ddaff, #78e1fe, #62e6eb, #6ce8cc);
+            background-attachment: fixed;
+        }
+
+        .shell {
+            width: 90%;
+            height: 700px;
+            display: flex;
+        }
+
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+            border-radius: 20px;
+            border: 10px solid #fff;
+            background-color: #fff;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .box>span {
+            font: 200 45px '优设标题黑';
+            font-family: 华文行楷;
+            text-align: center;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:hover {
+            flex-basis: 40%;
+        }
+
+        .box:hover>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fa1,
+        .fa2,
+        .fa3 {
+            display: flex;
+            width: 100%;
+            height: 840px;
+        }
+
+        /* 音乐 */
+        .music {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 300px;
+        }
+
+        .music i {
+            display: block;
+            width: 300px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: rgb(253, 215, 0);
+            margin-bottom: 5px;
+        }
+
+        .music audio {
+            width: 300px;
+            border-radius: 6px;
+            background-color: rgba(123, 123, 123, .01);
+        }
+
+        /* 自我介绍 */
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .introduce {
+            position: relative;
+            background: url(https://note.youdao.com/yws/api/personal/file/WEB7e4c162e1e7c69be39c398de27bb9d51?method=download&shareKey=8685f9b59d4369f882ba6750303d8bc5) no-repeat fixed;
+            padding: 57px 155px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+        }
+
+        .introduce .head_pic {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            background: url(https://note.youdao.com/yws/api/personal/file/WEBd4b7d742b84b01c7596f78afb0334200?method=download&shareKey=988683d5b469d39ad3e4581b69c022d9) no-repeat;
+            background-size: 100%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        .introduce .contact {
+            float: right;
+            /* background-color: pink; */
+            height: 35px;
+        }
+
+        .introduce .contact ul li {
+            font-family: 'icomoon';
+            position: relative;
+            float: left;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 21px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #29AC47;
+            margin: 0 9px;
+            border-radius: 50%;
+        }
+
+        .introduce .contact ul li::before {
+            content: '11';
+            position: absolute;
+            top: -56px;
+            display: block;
+            background-color: #323232;
+            padding: 0 7px;
+            height: 38px;
+            font-size: 16px;
+            line-height: 38px;
+            color: white;
+            visibility: hidden;
+        }
+
+        .introduce .contact ul li:hover::before {
+            visibility: visible;
+        }
+
+        .introduce .contact ul li:nth-child(1)::before {
+            content: '@afetoiris';
+            transform: translateX(-33%);
+        }
+
+        .introduce .contact ul li:nth-child(2)::before {
+            content: 'affettoiris@yeah.net';
+            transform: translateX(-40%);
+        }
+
+        .introduce .contact ul li:nth-child(3)::before {
+            content: '1404024930';
+            transform: translateX(-34%);
+        }
+
+        .introduce .sub_introduce {
+            transform: translateY(38px);
+        }
+
+        .introduce .sub_introduce p {
+            margin: 1.5rem auto 3rem;
+            text-align: center;
+            color: #999;
+            font-family: MV Boli;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .introduce .main_body {
+            margin-top: 150px;
+        }
+        /* 正文共性 */
+        .introduce .main_body .introduce_conmon {
+            float: left;
+            position: relative;
+            background-color: #FEFEFE;
+            margin: 0 12px 40px;
+            padding: 91px 22px 50px;
+            text-indent: 2em;
+            font-family: 'Architects Daughter', cursive !important;
+            font-size: 1.38rem;
+            font-weight: 300;
+            font-style: italic;
+            color: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 0 27px 27px rgba(50, 50, 93, .1);
+            transition: all .3s;
+        }
+        .introduce .main_body .introduce_conmon:hover {
+            transform: translateY(-5px);
+        }
+        .introduce .main_body .introduce_conmon::before {
+            position: absolute;
+            top: -42px;
+            left: -38px;
+            color: #4DB681;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+
+        .introduce .main_body .introduce_conmon::after {
+            text-indent: 0;
+            position: absolute;
+            top: 45px;
+            left: 5px;
+            display: inline-block;
+            border-radius: 4px;
+            padding: 0 16px;
+            font-size: 15px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            color: white;
+            font-style: italic;
+        }
+        /* 各个板块特性 */
+        .introduce .main_body .introduce1 {
+            width: 492px;
+        }
+
+        .introduce .main_body .introduce1::before {
+            content: '关于我';
+        }
+
+        .introduce .main_body .introduce1::after {
+            content: '办事风格';
+            background-color: #B28FCE;
+        }
+
+        .introduce .main_body .introduce2 {
+            width: 338px;
+        }
+
+        .introduce .main_body .introduce2::before {
+            content: '为什么写博客';
+        }
+
+        .introduce .main_body .introduce2::after {
+            content: '风花雪月之事';
+            background-color: #BC9F77;
+        }
+        .introduce .main_body .introduce3 {
+            width: 492px;
+        }
+
+        .introduce .main_body .introduce3::before {
+            content: '关于gitee搭博客';
+        }
+
+        .introduce .main_body .introduce3::after {
+            content: '一种神秘生物';
+            background-color: #F9BF45;
+        }
+        .introduce .main_body .introduce3 a {
+            display: block;
+            color: #4BBC89;
+            transition: all .3s linear;
+        }
+        .introduce .main_body .introduce3 a:hover {
+            transform: scale(110%);
+        }
+        .introduce .main_body .introduce4 {
+            /* 那个博主是父盒子display: flex;实现一行三个，上下自动对齐的，我暂时不会，先用margin-top: -198px;顶着。 */
+            margin-top: -165px;
+            width: 338px;
+        }
+
+        .introduce .main_body .introduce4::before {
+            content: '本博客开源吗';
+        }
+
+        .introduce .main_body .introduce4::after {
+            content: '文人墨客之雅';
+            background-color: #F596AA;
+        }
+        .introduce4>a {
+            display: block;
+            color: #4BBC89;
+            text-indent: 0;
+            transition: all .3s linear;
+        }
+        .introduce4>a:hover {
+            transform: scale(110%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <span class="blog_name">
+            <a href="../index.html">AfetoIris</a>
+        </span>
+        <div class="menus">
+            <ul>
+                <li><a href="../index.html" style="font-family: 'icomoon';"> 首页</a></li>
+                <li><a href="../html/inDeveloping.html" style="font-family: 'icomoon';"> 留言板</a></li>
+                <li><a href="http://www.cxy521.com/" target="_blank" style="font-family: 'icomoon';"> 百宝箱</a></li>
+                <li><a href="../html/friendLink.html" style="font-family: 'icomoon';"> 友链</a></li>
+                <li><a href="makeCollection.html" style="font-family: 'icomoon';""> 作品集</a></li>
+                <li><a href="../html/aboutMe.html" style="font-family: 'icomoon';"> 关于我</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 图片 -->
+    <div class="fa1">
+        <div class="shell">
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBbc3125c5c360be3a79d52b73bd861264?method=download&shareKey=da0034b5f2c3fe4793cb163e7d886e2e">
+                <span>航大·出征</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB354c27fcb6fa437d89935a41181e3189?method=download&shareKey=5e495f9a8decf893e1bdccfbd8020819">
+                <span>航大·秋叶</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB728fb89eaf7bc151d50dc3a64cc9b897?method=download&shareKey=426c8d9a27c5be175e7549d7096300ae">
+                <span>天津·晚霞 </span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBe7d89f5442f502c2320478d222f0bfcd?method=download&shareKey=a8ad87b8d4bc73c4f5137dc994cdde3c">
+                <span>航大·雪景</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB8f77c02f2a866c1836da1d292f3d2c1b?method=download&shareKey=c8d39cc30096f05b5edccebf6371b8e1">
+                <span>航大·倒影</span>
+            </div>
+        </div>
+    </div>
+    <div class="fa2">
+        <div class="shell">
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB064a3a3f44b1b10f08c42683732b7432?method=download&shareKey=2ac8bf8f214d37622f05ee100fc9bfa5">
+                <span>古琴老师</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBd3ecc4e747e94a23b8402d7b893d9a95?method=download&shareKey=bf8e57d97c6aeb3587bedb1c0c442d83">
+                <span>游徐州</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBb58b4a130ddb4d9fe6fb71ffad20ba70?method=download&shareKey=6a6359eb7d04656bf6b117b180dacf0b">
+                <span>19啦</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBe54a65fe0e649b1d393fbf4dfe3dd07d?method=download&shareKey=77a922c63a3f2e0f2aca67db862e2e31">
+                <span>津门故里</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB6a60da4e2c9c369835998b720fe6b70a?method=download&shareKey=c9219b8082c0cec7b15f9b5dd452375b">
+                <span>天津非遗</span>
+            </div>
+        </div>
+    </div>
+    <div class="fa3">
+        <div class="shell">
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB35bcf4be5685315737f5565cc58de478?method=download&shareKey=4ede2a58ef0f93293eec48f110988ef9">
+                <span>晓看天色</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBf0b88a369f213fc44db68861b973e871?method=download&shareKey=c108ec352a969d87aca65ba059b35cb0">
+                <span>暮看云</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB9f68454910427d3b9a1e2d95588844be?method=download&shareKey=f5d803b3ec536f6c803886ea219522a6">
+                <span>行欢乐谷</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEBaf95264fc9280d0086cfa9df4e6a81ee?method=download&shareKey=f04e30ce482c730cb810e627ca8337e5">
+                <span>偶像富江</span>
+            </div>
+            <div class="box">
+                <img
+                    src="https://note.youdao.com/yws/api/personal/file/WEB4de07062c9f4e14ab9c48ecf1c6cc446?method=download&shareKey=cf959b2e778938cd0aeeb2249ae058e1">
+                <span>等什么君</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 音乐 -->
+    <div class="music">
+        <i>小城夏天</i>
+        <audio src="../video/小城夏天（甜嗓版）.mp3" autoplay loop controls></audio>
+    </div>
+    <!-- 自我介绍 -->
+    <div class="introduce w clearfix">
+        <div class="head_pic"></div>
+        <div class="contact">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sub_introduce">
+            <p style="transform: translateX(9%);">Web Front-end Engineer</p>
+            <p>Life was like a box of chocolates, you never know what you’re gonna get.</p>
+        </div>
+        <div class="main_body">
+            <div class="introduce1 introduce_conmon">办事风格嘛~我挺喜欢独立完成一件事情，比如被安排任务的话，你只需要告诉我做什么而无需告诉我怎么做。
+                我非常喜欢电影《神秘海域》里面的一句台词，男主角帮同伴抢十字架，同伴安排他进入那个戒备森严的大楼里切断电源制造混乱，
+                男主问“我要怎么切断电源”,答：“看你喽，你也得出点力，我不会让你白白分一杯羹”。
+                这个回答就很巧妙，意思是说如果事无巨细都需要别人安排好怎么做，那办事的人就是可替代的，换谁都可以替补掉他，
+                也显得这个人是没有能力的。
+                所以我办事倾向于：你只管安排,其余的交给我。
+            </div>
+            <div class="introduce2 introduce_conmon">
+                很长时间了，总是想写点什么，无关风月，就是想写点什么。无论是记录知识点，总结技能树，人生长谈，风花雪月之事，都可以有一个存档的地方，对于复盘，回忆，都是一个极好的方谭。
+            </div>
+            <div class="introduce3 introduce_conmon">
+                个人网站博主是一种有点神秘的动物，大部分隐身在互联网的丛林中，
+                很少有人观察到。那些完全生活在 Facebook 和 Google 的美丽花园中的互联网用户，甚至可能都不知道该物种的存在。
+                其他没有经验的用户可能会认为，个人网站已经像恐龙那样灭绝。
+                事实是野外还存在许多标本，只有了解该物种习性的猎人才能发现它们。
+                <a href="https://www.bilibili.com/video/BV1F54y187X1?share_source=copy_web&vd_source=63b43f0269feaf8bfd32feece00688ab" target="_blank">5分钟拥有自己的网站 #Gitee pages篇</a>
+            </div>
+            <div class="introduce4 introduce_conmon">
+                自百年前清政府闭关锁国状态被英人打破，我们便知唯有与大世界融汇贯通才能源源不断生生不息。
+                时至今日我们依旧能见到不少开源的例子，例如linux之父Torvalds开源的第一代linux内核，
+                吸引了大批程序员的关注，推动了操作系统的发展，也为人类贡献了宝贵的财富。        
+                <br>申明：源码仅供学习和搭建个人博客，实验作业请勿抄袭，谢谢理解。  
+                <a href="https://gitee.com/afetoiris/afetoiris" target="_blank">清北永远得不到的学生的源码</a>    
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+body {
+    background: linear-gradient(to bottom, #cdf5c1, #d3f1b5, #dbeca9, #e4e79e, #ede195, #f2d88b, #f7ce84, #fcc47e, #fcb478, #fba574, #f89573, #f48674) fixed;
+    /*height: 100vh;*/
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.collections {
+    position: relative;
+    margin-top: 50px!important;
+    margin-bottom: 50px!important;
+    background: url(https://note.youdao.com/yws/api/personal/file/WEB7e4c162e1e7c69be39c398de27bb9d51?method=download&shareKey=8685f9b59d4369f882ba6750303d8bc5) no-repeat;
+    background-size: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 5px rgba(123, 123, 123, 0.2);
+}
+img {
+    width: 300px;
+}
+video {
+    width: 300px;
+}
+p {
+    font-size: 16px;
+    
+}
+.demo1 {
+    display: block;
+    width: 300px;
+}
+.demo1:hover {
+    cursor: pointer;
+}
+.demo2 {
+    font-size: 16px;
+    color: skyblue;
+}
+.demo2:hover {
+    color: darkblue;
+}
+.main::after {
+    content: '最近忙项目，blog偷点懒，我再学点就回来精细制作，见谅鸭~申し訳ありません';
+    position: absolute;
+    top: 10px;
+    left: 350px;
+    width: 100px;
+}
+
+.demo_box {
+    display: inline-block;
+}

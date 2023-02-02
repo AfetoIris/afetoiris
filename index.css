@@ -1,0 +1,301 @@
+body {
+    background-image: linear-gradient(to bottom, #cdf5c1, #d3f1b5, #dbeca9, #e4e79e, #ede195, #f2d88b, #f7ce84, #fcc47e, #fcb478, #fba574, #f89573, #f48674);
+    cursor: url("cursor/PaperPlane.ico"),auto;
+}
+
+/* header部分，复用率太高，记得备份 */
+header {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+header .blog_name a {
+    float: left;
+    margin-left: 35px;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.6em;
+    color: #EEEEEE;
+    font-weight: 700;
+}
+
+header .menus {
+    float: right;
+    margin-right: 28px;
+}
+
+header .menus ul li {
+    float: left;
+}
+
+header .menus ul li a {
+    display: block;
+    margin: 0 17px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.6em;
+    color: #EEEEEE;
+    transition: all .5s;
+}
+
+header .menus ul li a:hover {
+    transform: translateY(-5px) scale(110%);
+    color: #49b1f5;
+}
+
+/* 第二部分签名 */
+.signatures_fa {
+    position: relative;
+    background: url(https://note.youdao.com/yws/api/personal/file/WEB71d3ad86b7d44ee4f69901c9d1c1d228?method=download&shareKey=eb57da31593bb3c6056dc39fa990ba03) no-repeat 0 0 fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 810px;
+    box-shadow: 0 1px 4px 1px rgba(123, 123, 123, .3);
+}
+
+.signatures {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.signatures>i {
+    color: black;
+    font-size: 33px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-family: 华文行楷;
+}
+.signatures>i::after {
+    content: '|';
+}
+
+@keyframes typewriting {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 100%;
+    }
+
+    100% {}
+}
+
+/* 添加倒三角上下抖动组件 */
+.up_down_tri {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    /* transform: rotate(-45deg); */
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    animation: upAndDown 0.8s linear infinite alternate;
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: rotate(-45deg);
+        border-bottom-color: rgba(255, 255, 255, .3);
+        border-left-color: rgba(255, 255, 255, .3);
+    }
+
+    100% {
+        transform: translateY(-20px) rotate(-45deg);
+        border-left: 4px solid white;
+        border-bottom: 4px solid white;
+    }
+}
+
+/* 第三部分，博客页面 */
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 文章 */
+.displayBlock {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 1px rgba(123, 123, 123, .3);
+    margin-bottom: 20px;
+}
+
+.article_area {
+    float: left;
+    margin-top: 42px;
+    margin-right: 16px;
+    width: 897px;
+}
+
+.article_area .article {
+    width: 897px;
+    height: 280px;
+}
+
+.article_area .article .article_img {
+    overflow: hidden;
+    float: left;
+    width: 343px;
+    height: 280px;
+}
+
+.article_area .article .article_img .article_img1 {
+    margin-left: -76px;
+    height: 100%;
+}
+
+.article_area .article .article_cover {
+    float: left;
+    padding-left: 106px;
+    background-color: rgba(243, 243, 243, 0.7);
+    width: 554px;
+    height: 280px;
+}
+
+.article_area .article .article_cover>h1 {
+    margin-top: 24%;
+    font-weight: 600;
+    font-size: 24px;
+    color: #1F2E3E;
+}
+
+.article_area .article .article_cover>span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #858585;
+}
+/* 因为文章左侧栏目的每张img大小内容等不一，得单独设置样式 */
+.article_img2 {
+    width: 100%;
+}
+
+/* 改进代码，为了让每张图片根据胖瘦自动铺满盒子，使用object-fit: cover; */
+.article_img_all {
+    width: 343px;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* 小导航栏 */
+.subnav {
+    float: left;
+    margin-top: 42px;
+    width: 287px;
+}
+
+.subnav .me,
+.subnav .introduce {
+    border-radius: 10px;
+    margin-bottom: 27px;
+    padding: 27px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 4px 1px rgba(123, 123, 123, .3);
+    width: 287px;
+    height: 378px;
+}
+.subnav .introduce>h2 {
+    text-align: center;
+    font-size: 24px;
+}
+.subnav .introduce>div {
+    text-indent: 1.5em;
+    font-size: 16px;
+}
+.subnav .introduce i {
+    display: block;
+    text-align: right;
+}
+.subnav .me .head_pic_fa {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+@keyframes scale_head_pic {
+    0% {
+
+    }
+    50% {
+        transform: scale(120%);
+    }
+    100% {
+
+    }
+}
+.subnav .me .head_pic_fa:hover {
+    animation: scale_head_pic .5s linear;
+}
+.subnav .me>div img {
+    width: 100%;
+    height: 100%;
+}
+
+.subnav .me .author_name {
+    height: 44px;
+    line-height: 44px;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: var(--font-color);
+}
+
+.job {
+    text-align: center;
+    font-size: 14px;
+    font-family: MV Boli;
+}
+.subnav .me .author_info__description {
+    height: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--font-color);
+}
+
+.subnav .me .card_info_data {
+    margin-top: 10px;
+    height: 67px;
+    width: 233px;
+}
+
+.subnav .me .card_info_data ul li {
+    float: left;
+    margin: 0 32px;
+}
+
+.subnav .me .card_info_data ul li a {
+    display: block;
+    height: 67px;
+    width: 50px;
+    text-align: center;
+    color: #4C4948;
+}
+
+.subnav .me .card_info_data ul li a h6 {
+    height: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+.subnav .me .card_info_data ul li a em {
+    height: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+
+}

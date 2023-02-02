@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    /* background-image: linear-gradient(to bottom, #cdf5c1, #d3f1b5, #dbeca9, #e4e79e, #ede195, #f2d88b, #f7ce84, #fcc47e, #fcb478, #fba574, #f89573, #f48674); */
+    background: url(https://note.youdao.com/yws/api/personal/file/WEB636bc9150c4db481f54d7235b802338f?method=download&shareKey=e36396398919ba7bd1203cba0e4d51fd) no-repeat fixed;
+    background-size: 100%;
+}
+
+.romantic {
+    box-shadow: 0 0 5px 5px rgba(123, 123, 123, .3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 80px 60px;
+}
+.textAlignCenter {
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    color: black;
+    text-indent: 2em;
+}
+img {
+    display: inline-block;
+    width: 30%;
+}

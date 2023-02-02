@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4atdzo');
+  src:  url('fonts/icomoon.eot?4atdzo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4atdzo') format('truetype'),
+    url('fonts/icomoon.woff?4atdzo') format('woff'),
+    url('fonts/icomoon.svg?4atdzo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gatsby:before {
+  content: "\e904";
+  color: #639;
+}
+.icon-tencentqq:before {
+  content: "\e905";
+  color: #eb1923;
+}
+.icon-compose:before {
+  content: "\e900";
+}
+.icon-edit-pencil:before {
+  content: "\e901";
+}
+.icon-portfolio:before {
+  content: "\e902";
+}
+.icon-list:before {
+  content: "\e906";
+}
+.icon-home3:before {
+  content: "\e903";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
