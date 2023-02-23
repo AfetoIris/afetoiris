@@ -1,7 +1,9 @@
 # afetoiris
 
 #### 介绍
-个人博客
+<a href="https://github.com/AfetoIris">
+  <img decoding="async" src="https://avatars.githubusercontent.com/u/103482977?v=4" width="70px">
+</a>
 
 #### 软件架构
 软件架构说明
