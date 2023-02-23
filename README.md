@@ -1,39 +1,18 @@
-# afetoiris
-
-#### 介绍
-<a href="https://github.com/AfetoIris">
-  <img decoding="async" src="https://avatars.githubusercontent.com/u/103482977?v=4" width="70px">
-</a>
-
-#### 软件架构
-软件架构说明
+<div align='center'>
+<h1>Bowen</h1>
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+现就读于CAUC  
+ 目前感兴趣于Java,c++,Go,JavaScript,Vue  
+🌱 正在学习Vue,Go,C++  
+💞 正在寻找对博客开发感兴趣的人  
+ 个人邮箱-WenTesla@163.com  
 
 
-#### 特技
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=WenTesla&layout=compact)](https://github-readme-stats-ten-gilt.vercel.app)
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+  
+</div>  
+
+![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/12640/ca6c4b8726de4ff58864b2ea36c7a732.PNG)
+
