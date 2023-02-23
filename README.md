@@ -1,5 +1,5 @@
 <div align='center'>
-<h1>笔名：冷莫寒，你也可以叫我鸢尾，因为行不更名坐不改姓，我的英文名曰AffettoIris</h1>
+<h1>冷莫寒，鸢尾，AffettoIris 都是我，你好朋友</h1>
 
 
 现就读于CAUC  
